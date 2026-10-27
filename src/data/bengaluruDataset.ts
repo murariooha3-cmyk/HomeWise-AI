@@ -1,9 +1,11 @@
 import { PropertyRecord, LocalityInfo, DatasetSummary, ModelMetricComparison } from '../types';
 
-export const HERO_IMAGE = '/src/assets/images/hero_bengaluru_residence_1793103577052.jpg';
-export const VILLA_IMAGE = '/src/assets/images/villa_whitefield_1793103577439.jpg';
-export const APARTMENT_IMAGE = '/src/assets/images/apartment_indiranagar_1793103578435.jpg';
-export const HOUSE_IMAGE = '/src/assets/images/house_koramangala_1793103578314.jpg';
+import HERO_IMAGE from '../assets/images/hero_bengaluru_residence_1793103577052.jpg';
+import VILLA_IMAGE from '../assets/images/villa_whitefield_1793103577439.jpg';
+import APARTMENT_IMAGE from '../assets/images/apartment_indiranagar_1793103578435.jpg';
+import HOUSE_IMAGE from '../assets/images/house_koramangala_1793103578314.jpg';
+
+export { HERO_IMAGE, VILLA_IMAGE, APARTMENT_IMAGE, HOUSE_IMAGE };
 
 export const BENGALURU_LOCALITIES: LocalityInfo[] = [
   {
