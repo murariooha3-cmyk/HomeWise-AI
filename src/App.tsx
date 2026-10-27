@@ -20,7 +20,14 @@ import { BENGALURU_LOCALITIES, RAW_PROPERTY_RECORDS, DATASET_SUMMARY, MODEL_METR
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('home');
   const [isDark, setIsDark] = useState<boolean>(() => {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    try {
+      const savedTheme = localStorage.getItem('homewise_theme');
+      if (savedTheme === 'dark') return true;
+      if (savedTheme === 'light') return false;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } catch {
+      return false;
+    }
   });
 
   // Data states
@@ -38,12 +45,22 @@ export default function App() {
     bhk?: number;
   }>({});
 
-  // Initialize theme
+  // Initialize and persist theme
   useEffect(() => {
+    const root = document.documentElement;
+    const body = document.body;
     if (isDark) {
-      document.documentElement.classList.add('dark');
+      root.classList.add('dark');
+      body.classList.add('dark');
+      try {
+        localStorage.setItem('homewise_theme', 'dark');
+      } catch {}
     } else {
-      document.documentElement.classList.remove('dark');
+      root.classList.remove('dark');
+      body.classList.remove('dark');
+      try {
+        localStorage.setItem('homewise_theme', 'light');
+      } catch {}
     }
   }, [isDark]);
 
