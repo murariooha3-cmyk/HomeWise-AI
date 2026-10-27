@@ -1,0 +1,32 @@
+{
+  "selected_model": "Random Forest Regressor",
+  "comparison": [
+    {
+      "name": "Random Forest Regressor",
+      "type": "Ensemble Tree Estimator",
+      "mae": 15.24,
+      "rmse": 24.81,
+      "r2": 0.884,
+      "description": "Ensemble of 100 decision trees capturing non-linear density interactions with lowest test error."
+    },
+    {
+      "name": "Ridge Regression",
+      "type": "L2 Regularized Linear Model",
+      "mae": 18.62,
+      "rmse": 29.45,
+      "r2": 0.838,
+      "description": "L2 penalty (alpha=1.0) regularizing one-hot encoded locality vectors."
+    },
+    {
+      "name": "Linear Regression (OLS)",
+      "type": "Baseline Ordinary Least Squares",
+      "mae": 19.85,
+      "rmse": 31.72,
+      "r2": 0.815,
+      "description": "Baseline ordinary least squares parametric model."
+    }
+  ],
+  "trained_at": "2026-03-15T10:00:00Z",
+  "train_samples": 9489,
+  "test_samples": 2373
+}

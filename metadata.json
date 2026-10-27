@@ -1,0 +1,6 @@
+{
+  "name": "HomeWise AI — Bengaluru House Price Prediction",
+  "description": "Intelligent machine learning house price prediction platform for Bengaluru residential properties with real-world dataset analytics, locality insights, interactive map, and model evaluation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
